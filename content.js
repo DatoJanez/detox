@@ -70,7 +70,8 @@ class PredictClass{
         div.setAttribute("style", 'text-transform: capitalize;')
         // div.className = cont.children[0].className
         div.classList.add('lable-j')
-        div.innerHTML = 'Measuring the toxicity...'+ '<small class="f1vn8v6g _40dc33a5-navigation-outcomeStatus">&nbsp;</small>'
+        div.classList.add('lable-j-2')
+        div.innerHTML = '<div>Measuring the toxicity...</div>'+ '<br/><div class="loader">Loading...</div>'
         // prog = cont.children[0].querySelector('div').cloneNode('true')
         // div.appendChild(prog)
 
