@@ -58,7 +58,7 @@ class PredictClass{
 
     constructor(text){
         if(!text || !text.length || text.length < 30) {
-            document.querySelector('div[role="scrollbar-lenses"]').innerHTML = ''
+            document.querySelector('div[role="scrollbar-lenses"]').innerHTML = '<div class="lable-j lable-j-2" data-name-j="short-text"><div>The text is too short</div></div>'
             return
         }
         [...document.querySelectorAll('div[role="scrollbar-lenses"] > div[data-name-j]')].forEach(div => div.parentNode.removeChild(div))
@@ -76,8 +76,6 @@ class PredictClass{
         // div.appendChild(prog)
 
         cont.appendChild(div)
-
-        document.querySelector('div[role="scrollbar-lenses"]')
 
         getModel()
             .then(model => model
